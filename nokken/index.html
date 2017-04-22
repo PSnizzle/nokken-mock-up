@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
   	<link rel="stylesheet" type="text/css" href="css/main.css">
-
+  	<link rel="stylesheet"  href="css/normalize.css">
+  	<link rel="stylesheet"  href="css/lightbox.css">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,82 +18,276 @@
   		<div class="hero-unit"></div>
   	</div>
   	<div class="container container-fluid">
-  	<!-- Navbar -->
-		<nav class="navbar navbar-toggleable-md navbar-light" style="background-color: #E3E2E2;">
-		  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-		    <span class="navbar-toggler-icon"></span>
-		  </button>
-		  <a class="navbar-brand" href="img/logo.png"><img src="img/logo.png" width="150" alt=""></a>
-		  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-		    <div class="navbar-nav">
-		      <a class="nav-item nav-link active" href="#">OM OSS<span class="sr-only">(current)</span></a>
-		      <a class="nav-item nav-link" href="#">MENY</a>
-		      <a class="nav-item nav-link" href="#">GALLERI</a>
-		      <!-- Button trigger modal -->
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Kontakt Oss</button>
+	  	<!-- Navbar -->
+			<nav class="navbar navbar-toggleable-md navbar-light" style="background-color: #E3E2E2;">
+			  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			  <a class="navbar-brand" href="#"><img src="img/logo.png" width="150" alt=""></a>
+			  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			    <div class="navbar-nav ">
+			      <a class="nav-item nav-link active" href="#info">OM OSS<span class="sr-only">(current)</span></a>
+			      <a class="nav-item nav-link" href="#accordion">MENY</a>
+			      <a class="nav-item nav-link" href="#gallery">GALLERI</a>
+			      <!-- Button trigger modal -->
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal" data-whatever="@getbootstrap">Kontakt Oss</button>
 
 
-					</div>
+						</div>
+			    </div>
+			  </div>
+			</nav>
+			
+
+			<!-- Modal Contents -->
+			<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">Book et Bord eller Bestill Catering</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <form>
+		          <div class="form-group">
+		            <input type="text" class="form-control" id="recipient-name" placeholder="Navn:">
+		          </div>
+		          <div class="form-group">
+		            <input type="text" class="form-control" id="email" placeholder="Email:">
+		          </div>
+		          <div class="form-group">
+		            <textarea class="form-control" id="message-text"  placeholder="Skriv melding her:"></textarea>
+		          </div>
+		        </form>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">lukk</button>
+		        <button type="button" class="btn btn-primary">Send Melding</button>
+		      </div>
 		    </div>
 		  </div>
-		</nav>
-		
-
-		<!-- Modal Contents -->
-		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h5 class="modal-title" id="exampleModalLabel">Book et Bord eller Bestill Catering</h5>
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	          <span aria-hidden="true">&times;</span>
-	        </button>
-	      </div>
-	      <div class="modal-body">
-	        <form>
-	          <div class="form-group">
-	            <label for="recipient-name" class="form-control-label">Navn:</label>
-	            <input type="text" class="form-control" id="recipient-name">
-	          </div>
-	          <div class="form-group">
-	            <label for="message-text" class="form-control-label">Melding:</label>
-	            <textarea class="form-control" id="message-text"></textarea>
-	          </div>
-	        </form>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">lukk</button>
-	        <button type="button" class="btn btn-primary">Send Melding</button>
-	      </div>
-	    </div>
-	  </div>
-	  </div>
-
-			
-		<div class="container">
-			<!-- Opening Times/ About Section -->
-			<div class="row" id="info">
-		    <div class="col-5">
-		      <h2 id="openHeader">Åpenings Tider</h2>
-		      <h4 id="OpenParagraph1">Tirsdag – Søndag:<br>11.30-00.30<br>Mandag: Stengt</h4>
-		    </div>
-		    <div class="col-7">
-		      <h2 id="aboutHeader">Om Oss</h2>
-		      <h6 class="elsker">Vi elsker mat!!!</h6>
-		    </div>
 		  </div>
-			
-		
 
-		<!-- Map -->
-			<!-- <div class="Map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.7781245344183!2d10.755334915786692!3d59.91922957062662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416e66efedebc9%3A0x5c3c43cd56567ea!2zTsO4a2tlbg!5e0!3m2!1sen!2sno!4v1492162706747" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>	
-			</div> -->
-		</div>
+				
+			<div class="container">
+				<!-- Opening Times/ About Section -->
+				<div class="row align-items-center" id="info">
+			    <div class="col-5 col-med-12">
+			      <h2 id="openHeader">Åpningstider</h2>
+			      <h4 id="OpenParagraph1">Tirsdag – Søndag:<br>11.30-00.30<br>Mandag: Stengt</h4>
+			    </div>
+			    <div class="col-7 col-med-12">
+			      <h2 id="aboutHeader">Om Oss</h2>
+			      <h6 id="elsker">Vi elsker mat!!!</h6>
+			      <p id="aboutParagraph">Vi byr på robust mat laget fra bunn av, dagsaktuell hverdagsmat.<br> 
+	Lunsj og kaffe fra 11:30 og utvider med flere middagsretter fra kl 17:00. <br>
+	Nøkken har også et bredt utvalg av drikke, viner på glass og flaske.
+	Øl fra mikrobrygg og gode drinker.</p>
+						<p id="nøkkenLink"><a class="Link" href="">Snipp snapp snute, så var eventyret ute...</a></p>
+						<p id="book">Ved bordbestilling, spørsmål eller andre henvendelser – ring telefon <a class="Link" href="tel:+47-901-26-888">901 26 888</a> 
+	eller <a class="Link" href="" data-toggle="modal" data-target="#contactModal">klikk her.</a></p>
+			    </div>
+			  </div>
+
+			  <!-- Accordian menu -->
+			  <div id="accordion" role="tablist" aria-multiselectable="true">
+			  	<div class="card">
+				    <div class="card-header" role="tab" id="headingOne">
+				      <h5 class="mb-0">
+				        <a class="accordionHeader" data-toggle="collapse" data-parent="#accordion" href="#nøkkenMenu" aria-expanded="false" aria-controls="nøkkenMenu">
+				        		<h3>Meny</h3>
+				        	</a>  
+				      </h5>
+				    </div>
+				  	<div id="nøkkenMenu" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+				      <div class="card-block">
+				        <div id="carousel" class="carousel slide" data-ride="carousel">
+								  <div class="carousel-inner" role="listbox">
+								    <div class="carousel-item active">
+								    	<div class="row">
+								    		<div class="col-xs-6">
+								      		<img class="d-block img-fluid" style="width: auto; height: auto; max-height: 680px; margin: 0 auto;" src="menu/Lunsj1.png" alt="First slide">
+								      	</div>
+								      	<div class="col-xs-6">
+								      		<img class="d-block img-fluid" style="width: auto; height: auto; max-height: 680px; margin: 0 auto;" src="menu/Lunsj2.jpg" alt="Second slide">
+								    		</div>
+								      </div>
+								    </div>
+								    <div class="carousel-item">
+								    	<div class="row">
+								    		<div class="col-xs-6">
+								      		<img class="d-block img-fluid" style="width: auto; height: auto; max-height: 680px; margin: 0 auto;" src="menu/Dinner1.jpg" alt="Third slide">
+								      	</div>
+								      	<div class="col-xs-6">
+										      <img class="d-block img-fluid" style="width: auto; height: auto; max-height: 680px; margin: 0 auto;" src="menu/dinner2.jpg" alt="Fourth slide">
+										    </div>
+								      </div>
+								    </div>
+								    <div class="carousel-item">
+								    	<div class="row">
+								    		<div class="col-xs-6">
+								      		<img class="d-block img-fluid" style="width: auto; height: auto; max-height: 680px; margin: 0 auto;" src="menu/dessert.jpg" alt="Fifth slide">
+								      	</div>
+								      	<div class="col-xs-6">
+										      <img class="d-block img-fluid" style="width: auto; height: auto; max-height: 680px; margin: 0 auto;" src="menu/Non-alcohol-drink.jpg" alt="Sixth slide">
+										    </div>
+								      </div>
+								    </div>
+								    <div class="carousel-item">
+								    	<div class="row">
+								    		<div class="col-xs-6">
+								      		<img class="d-block img-fluid" style="width: auto; height: auto; max-height: 680px; margin: 0 auto;" src="menu/redWine.jpg" alt="Seventh slide">
+								      	</div>
+								      	<div class="col-xs-6">
+										      <img class="d-block img-fluid" style="width: auto; height: auto; max-height: 680px; margin: 0 auto;" src="menu/WhiteWine.jpg" alt="Eighth slide">
+										    </div>
+								      </div>
+								    </div>
+								    <div class="carousel-item">
+								    	<div class="row">
+								    		<div class="col-xs-6">
+								      		<img class="d-block img-fluid" style="width: auto; height: auto; max-height: 680px; margin: 0 auto;" src="menu/Other_Alcohol.jpg" alt="Ninth slide">
+								      	</div>
+								      	<div class="col-xs-6">
+										      <img class="d-block img-fluid" style="width: auto; height: auto; max-height: 680px; margin: 0 auto;" src="menu/Cocktails.png" alt="Tenth slide">
+										    </div>
+								      </div>
+								    </div>
+								  </div>
+									  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+									    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									    <span class="sr-only">Previous</span>
+									  </a>
+									  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+									    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+									    <span class="sr-only">Next</span>
+									  </a>
+									</div>
+				      </div>
+				    </div>
+				     <div class="card">
+					    <div class="card-header" role="tab" id="headingTwo">
+					      <h5 class="mb-0">
+					        <a class="accordionHeader collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+					          <h3>English Menu</h3>
+					        </a>
+					      </h5>
+					    </div>
+					    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+					      <div class="card-block">
+					        Coming Soon! <!-- Add Carousel with English Menu -->
+					        <!-- Carousel -->
+					      </div>
+					    </div>
+					  </div>
+				  </div>
+			  </div>
+			  				<!-- Gallery -->
+			  <!-- <section class="container-fluid gallery bg-faded">
+				 <header>
+				  <h3 class="text-center">Galleri</h3>
+				 </header>
+				 <div class="row text-center">
+				  <a href="#" class="col-md-3 grid__item">
+				   <div class="item__overlay">
+				    <button class="js-button btn btn-secondary-outline center-block" data-toggle="modal" data-target="#modalPicture" type="button" value="Expand photo" role="button">Expand photo</button>
+				   </div>
+				   <img id="imgGall" src="img/lunch.jpg" alt="Credits to Unsplash.com" />
+				  </a>
+				  <a href="#" class="col-md-3 grid__item">
+				   <div class="item__overlay">
+				    <button class="js-button btn btn-secondary-outline center-block" data-toggle="modal" data-target="#modalPicture" type="button" value="Expand photo" role="button">Expand photo</button>
+				   </div>
+				   <img id="imgGall" src="img/retter.jpg" alt="Credits to Unsplash.com" />
+				  </a>
+				  <a href="#" class="col-md-3 grid__item">
+				   <div class="item__overlay">
+				    <button class="js-button btn btn-secondary-outline center-block" data-toggle="modal" data-target="#modalPicture" type="button" value="Expand photo" role="button">Expand photo</button>
+				   </div>
+				   <img id="imgGall" src="img/elgburger.jpg" alt="Credits to Unsplash.com" />
+				  </a>
+				</div>
+				<div class="row text-center">
+				  <a href="#" class="col-md-3 grid__item">
+				   <div class="item__overlay">
+				    <button class="js-button btn btn-secondary-outline center-block" data-toggle="modal" data-target="#modalPicture" type="button" value="Expand photo" role="button">Expand photo</button>
+				   </div>
+				   <img id="imgGall" src="img/img_kokk.jpg" alt="Credits to Unsplash.com" />
+				  </a>
+				  <a href="#" class="col-md-3 grid__item">
+				   <div class="item__overlay">
+				    <button class="js-button btn btn-secondary-outline center-block" data-toggle="modal" data-target="#modalPicture" type="button" value="Expand photo" role="button">Expand photo</button>
+				   </div>
+				   <img id="imgGall" src="img/langbord.jpg" alt="Credits to Unsplash.com" />
+				  </a>
+				  <a href="#" class="col-md-3 grid__item">
+				   <div class="item__overlay">
+				    <button class="js-button btn btn-secondary-outline center-block" data-toggle="modal" data-target="#modalPicture" type="button" value="Expand photo" role="button">Expand photo</button>
+				   </div>
+				   <img id="imgGall" src="img/bar_flasker.jpg" alt="Credits to Unsplash.com" />
+				  </a>
+				</div>
+				<div class="row text-center">
+				  <a href="#" class="col-md-3 grid__item">
+				   <div class="item__overlay">
+				    <button class="js-button btn btn-secondary-outline center-block" data-toggle="modal" data-target="#modalPicture" type="button" value="Expand photo" role="button">Expand photo</button>
+				   </div>
+				   <img id="imgGall" src="img/coffe.jpg" alt="Credits to Unsplash.com" />
+				  </a>
+				  <a href="#" class="col-md-3 grid__item">
+				   <div class="item__overlay">
+				    <button class="js-button btn btn-secondary-outline center-block" data-toggle="modal" data-target="#modalPicture" type="button" value="Expand photo" role="button">Expand photo</button>
+				   </div>
+				   <img id="imgGall" src="img/martinbilde.jpg" alt="Credits to Unsplash.com" />
+				  </a>
+				  <a href="#" class="col-md-3 grid__item">
+				   <div class="item__overlay">
+				    <button class="js-button btn btn-secondary-outline center-block" data-toggle="modal" data-target="#modalPicture" type="button" value="Expand photo" role="button">Expand photo</button>
+				   </div>
+				   <img id="imgGall" src="img/nokkendrink.jpg" alt="Credits to Unsplash.com" />
+				  </a>
+				 </div>
+				</section>
+				<!-- Modal -->
+				<!-- <div id="modalPicture" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalPictureLabel" aria-hidden="true">
+				 <div class="modal-dialog" role="document">
+				  <div class="modal-content">
+				   <!-- Modal - header -->
+				   <!-- <div class="modal-header">
+				    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				     <span class="fa fa-times" aria-hidden="true"></span>
+				     <span class="sr-only">Close</span>
+				    </button>
+				   </div> --><!-- .end Modal - header -->
+				   <!-- Modal - body -->
+				   <!-- <div class="modal-body">
+				    <img class="js-modal-image" src="" alt="Credits to Unsplash.com" />
+				   </div><!-- .end Modal - body -->
+				 <!--  </div>
+				 </div>
+				</div> -->
+				<!-- .end modal -->			
+
+			<!-- Map PopUp -->
+				<!-- <div class="Map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.7781245344183!2d10.755334915786692!3d59.91922957062662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416e66efedebc9%3A0x5c3c43cd56567ea!2zTsO4a2tlbg!5e0!3m2!1sen!2sno!4v1492162706747" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>	
+				</div> -->
+			</div>
+			<div class="footer container container-fluid">
+				<div class="container-fluid col-md-7 pull-md-3">
+					<a href="#"><img class="brand" src="img/logo.png" width="150" alt="Nøkken Logo"></a>
+					<a href="https://www.facebook.com/nokkenoslo"><img id="facebook" src="img/facebook.png"></a>
+				</div>
+				<div class="col-md-3 push-md-9" id="copyright">&copy; 2017<br><a class="MyLink" href="">JoshWozniackaKnoll.com</a></div>
+				
+			</div>	
 		</div>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script type="" src="js/lightbox.js"></script>
   </body>
 </html>
