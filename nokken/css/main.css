@@ -1,3 +1,91 @@
+	/************** General ****************/	
+.Link {
+	text-decoration: none;
+	color: #fff;
+}
+
+
+/**
+ * Button component
+ */
+/*.js-button {
+ position: relative;
+ top: 0;
+ margin-top: 50%;
+ opacity: 0;
+ font-size: 1rem;
+ color: #fff;
+ border-radius: 2.1875rem;
+ -webkit-transform: translateY(-50%);
+ -ms-transform: translateY(-50%);
+ transform: translateY(-50%);
+ -webkit-transition: all .25s ease-in-out;
+ transition: all .25s ease-in-out;
+}
+.js-button:focus, .js-button:hover {
+ color: #111;
+ background-color: #fff;
+ border-color: #fff;
+}*/
+/**
+ * Grid styles
+ */
+/*.item__overlay {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(17, 17, 17, 0.45);
+ -webkit-transition: background-color .55s ease-in-out;
+ transition: background-color .55s ease-in-out;
+}
+.item__overlay:focus, .item__overlay:hover {
+ background-color: rgba(17, 17, 17, 0.05);
+}
+.item__overlay:focus > button, .item__overlay:hover > button {
+ opacity: 1;
+}
+.grid__sizer,
+.grid__item {
+ position: relative;
+ width: 20%;
+ min-width: 16.25rem;
+}
+.grid__item {
+ margin-bottom: .9375rem;
+ border-radius: 0.25rem;
+ overflow: hidden;
+}
+.grid__item--high,
+.grid__item--high img {
+ height: 30rem;
+}
+#imgGall {
+	padding: auto;
+	width: 75%;
+	max-width: 100%;
+	height: auto;
+}
+a,
+.fa {
+ color: #bbb;
+ -webkit-transition: color .25s ease-in-out;
+ transition: color .25s ease-in-out;
+}
+a:focus, a:hover,
+.fa:focus,
+.fa:hover {
+ text-decoration: none;
+ color: #666;
+}
+.active .fa {
+ color: #f62459;
+}*/
+	/************** Hero Section ****************/
+
+
+
 .jumbotron {
 	min-width: 100vw;
 	min-height: 100vh
@@ -11,19 +99,23 @@
     min-width: 100%;
 	height: 100vh;
 }
-
+	/************** Navbar Section ****************/
 .navbar {
 	margin-top: -12vh;
 	padding-bottom: 15px;
 }
+/*.nav-item {
+	margin-left: 5px;
+}*/
 
+	/************** Opening/About Section ****************/
 .container {
 	background-color: #E3E2E2;
 }
-#info{
+#info {
 	 background:
 	    linear-gradient(
-	      rgba(256, 256, 256, 0.45), 
+	      rgba(0, 0, 0, 0.45), 
 	      rgba(0, 0, 0, 0.45)
 	    ),
 	    url("../img/bar.jpg");
@@ -33,20 +125,72 @@
     padding-top: 45px;
     padding-bottom: 156px;
 }
-#openHeader{
+.accordionHeader {
+	text-align: center;
+	text-decoration: none;
+	color: #000;
+}
+
+	/************** Opening time ****************/
+}
+
+}
+#openHeader {
 	margin-top: 20px;
 	margin-bottom: 10px;
 	padding-top: 45px;
 	padding-bottom: 20px;
-	
 }
-#aboutHeader{
+	/************** About ****************/
+#aboutHeader {
 	margin-top: 20px;
 	margin-bottom: 10px;
 }
-.elsker {
+#elsker {
 	margin-top: 35px;
 }
+#aboutParagraph {
+	margin-top: 35px;
+	margin-bottom: 10px;
+}
+#nøkkenLink {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+#book {
+	margin-top: 45px;
+	margin-bottom: 10px;
+}
+	/************** Map Modal Section ****************/
+
 .Map {
 	text-align: center;
+}
+	/************** Footer ****************/
+.footer {
+	padding-bottom: 5px;
+}
+.brand {
+	margin-top: 15px;
+	margin-left: 45px;
+	margin-bottom: 10px;
+
+}
+#copyright {
+	text-align: center;
+	margin-top: -44px;
+}
+.MyLink {
+	text-decoration: none;
+	color: #000;
+}
+#facebook {
+	margin-left: 30px;
+	height: auto; 
+    width: auto; 
+    max-width: 30px; 
+    max-height: 30px;
+}
+a:hover {
+	color: #eee;
 }
